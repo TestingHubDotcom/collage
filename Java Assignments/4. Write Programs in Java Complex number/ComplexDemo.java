@@ -67,5 +67,7 @@ public class ComplexDemo {
 
         System.out.print("Multiplication: ");
         prod.display();
+
+        sc.close();
     }
 }
