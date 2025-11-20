@@ -2,6 +2,7 @@
 #include <stdio.h>
 #define MAX 100
 int graph[MAX][MAX], visited[MAX], n;
+
 void bfs(int start) {
     int queue[MAX], front = 0, rear = 0;
     for (int i = 0; i < n; i++) visited[i] = 0;
@@ -18,6 +19,7 @@ void bfs(int start) {
     }
     printf("\n");
 }
+
 void dfsUtil(int v) {
     visited[v] = 1;
     printf("%d ", v);
@@ -25,12 +27,14 @@ void dfsUtil(int v) {
         if (graph[v][i] && !visited[i]) dfsUtil(i);
     }
 }
+
 void dfs(int start) {
     for (int i = 0; i < n; i++) visited[i] = 0;
     printf("DFS: ");
     dfsUtil(start);
     printf("\n");
 }
+
 int main() {
     int e, u, v, start;
     printf("Enter number of vertices: ");

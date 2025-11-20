@@ -58,9 +58,9 @@ int evaluate(char post[])
     stack s;
     init(&s); // Initialize stack
     int op1, op2, result;
-    int i, j;
+    int i;
 
-    for (i = 0, j = 0; post[i] != '\0'; ++i)
+    for (i = 0; post[i] != '\0'; ++i)
     {
         // If the character is a digit, push it to the stack
         if (post[i] >= '0' && post[i] <= '9')
